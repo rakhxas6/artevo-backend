@@ -7,6 +7,7 @@ module.exports = ({ env }) => ({
     keys: env.array('APP_KEYS'),
   },
 
+
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
@@ -15,6 +16,8 @@ module.exports = ({ env }) => ({
     auth: {
       secret: env('ADMIN_JWT_SECRET'),
     },
-    url: '/admin', // optional, but safe to declare
-  },
+    url: '/admin',
 });
+
+});
+
