@@ -1,20 +1,21 @@
 module.exports = [
-  "strapi::logger",
-  "strapi::errors",
+  'strapi::errors',
   {
-    name: "strapi::cors",
+    name: 'strapi::cors',
     config: {
-      origin: ["https://e-comm-xi-eight.vercel.app/"],
-      methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-      headers: ["Content-Type", "Authorization"],
+      origin: ['https://e-comm-xi-eight.vercel.app'], // your frontend domain
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      headers: '*',
       credentials: true,
     },
   },
-  "strapi::security",
-  "strapi::poweredBy",
-  "strapi::query",
-  "strapi::body",
-  "strapi::session",
-  "strapi::favicon",
-  "strapi::public",
+  'strapi::security',
+  'strapi::poweredBy',
+  'strapi::logger',
+  'strapi::query',
+  'strapi::body',
+  'strapi::session',
+  'strapi::favicon',
+  'strapi::public',
 ];
+
